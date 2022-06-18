@@ -145,12 +145,12 @@ void X25519Keys::setSecretKey (const std::array<uint8_t, 32> &priv, bool calcula
     setSecretKey (priv.data(), calculatePublic);
 }
 
-std::string X25519Keys::getPublicKeyBase64String() const noexcept
+const std::string X25519Keys::getPublicKeyBase64String() const noexcept
 {
     return cppcodec::base64_rfc4648::encode (getPublicKey().data(), getPublicKey().size());
 }
 
-std::string X25519Keys::getSecretKeyBase64String() const noexcept
+const std::string X25519Keys::getSecretKeyBase64String() const noexcept
 {
     return cppcodec::base64_rfc4648::encode (getSecretKey().data(), getSecretKey().size());
 }

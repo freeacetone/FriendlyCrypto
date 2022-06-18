@@ -15,7 +15,7 @@
 
 namespace FriendlyCrypto {
 
-std::array<uint8_t, 32> hkdf (const std::array<uint8_t, 32> &key, const std::string &info, const uint8_t *salt)
+std::array<uint8_t, 32> hkdf (const std::array<uint8_t, 32> &key, const std::string &info, const uint8_t *salt) noexcept
 {
     EVP_PKEY_CTX* pctx = EVP_PKEY_CTX_new_id (EVP_PKEY_HKDF, nullptr);
     EVP_PKEY_derive_init (pctx);

@@ -29,8 +29,8 @@ public:
     const std::array<uint8_t, 32> getSecretKey()             const noexcept;
     const std::array<uint8_t, 32> getPublicKey()             const noexcept;
 
-    std::string getPublicKeyBase64String()                   const noexcept;
-    std::string getSecretKeyBase64String()                   const noexcept;
+    const std::string getPublicKeyBase64String()             const noexcept;
+    const std::string getSecretKeyBase64String()             const noexcept;
 
 private:
     std::array<uint8_t, 32> m_secret {0};
@@ -42,7 +42,7 @@ public:
     Signature(const std::array<uint8_t, 64>& raw)
         : m_data( new std::array<uint8_t, 64>(raw) ) {}
     const std::shared_ptr<std::array<uint8_t, 64>> data()      const noexcept;
-    std::string base64String()                                 const noexcept;
+    const std::string base64String()                           const noexcept;
 
     bool operator==(const Ed25519::Signature& another)         const noexcept;
     bool operator==(const std::array<uint8_t, 64>& rawAnother) const noexcept;

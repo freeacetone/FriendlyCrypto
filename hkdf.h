@@ -17,7 +17,7 @@
 using uint8_t = unsigned char;
 
 namespace FriendlyCrypto {
-std::array<uint8_t, 32> hkdf (const std::array<uint8_t, 32> &key, const std::string &info, const uint8_t *salt = nullptr);
+std::array<uint8_t, 32> hkdf (const std::array<uint8_t, 32> &key, const std::string &info, const uint8_t *salt = nullptr) noexcept;
 }
 
 #endif // HKDF_H

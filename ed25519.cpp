@@ -56,12 +56,12 @@ const std::array<uint8_t, 32> KeyPair::getPublicKey() const noexcept
     return m_public;
 }
 
-std::string KeyPair::getPublicKeyBase64String() const noexcept
+const std::string KeyPair::getPublicKeyBase64String() const noexcept
 {
     return cppcodec::base64_rfc4648::encode (getPublicKey().data(), getPublicKey().size());
 }
 
-std::string KeyPair::getSecretKeyBase64String() const noexcept
+const std::string KeyPair::getSecretKeyBase64String() const noexcept
 {
     return cppcodec::base64_rfc4648::encode (getSecretKey().data(), getSecretKey().size());
 }
@@ -73,7 +73,7 @@ const std::shared_ptr<std::array<uint8_t, 64>> Signature::data() const noexcept
     return m_data;
 }
 
-std::string Signature::base64String() const noexcept
+const std::string Signature::base64String() const noexcept
 {
     return cppcodec::base64_rfc4648::encode(m_data->data(), 64);
 }

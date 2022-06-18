@@ -36,8 +36,8 @@ public:
     const std::array<uint8_t, 32> agree (const std::string& pub)                          const noexcept;
     const std::array<uint8_t, 32> agree (const uint8_t* pub, size_t size = 32)            const noexcept;
 
-    std::string getPublicKeyBase64String()                                                const noexcept;
-    std::string getSecretKeyBase64String()                                                const noexcept;
+    const std::string getPublicKeyBase64String()                                          const noexcept;
+    const std::string getSecretKeyBase64String()                                          const noexcept;
 
 private:
     std::array<uint8_t, 32> m_publicKey {0};

@@ -15,7 +15,7 @@
 
 namespace FriendlyCrypto {
 
-std::vector<uint8_t> chaCha20 (const std::vector<uint8_t> &msg, const std::array<uint8_t, 32> &key, const uint8_t *nonce)
+std::vector<uint8_t> chaCha20 (const std::vector<uint8_t> &msg, const std::array<uint8_t, 32> &key, const uint8_t *nonce) noexcept
 {
     uint8_t fakenonce[24] {0};
     if (!nonce)
@@ -35,7 +35,7 @@ std::vector<uint8_t> chaCha20 (const std::vector<uint8_t> &msg, const std::array
     return out;
 }
 
-std::vector<uint8_t> chaCha20 (const uint8_t *msg, size_t msgSize, const std::array<uint8_t, 32> &key, const uint8_t *nonce)
+std::vector<uint8_t> chaCha20 (const uint8_t *msg, size_t msgSize, const std::array<uint8_t, 32> &key, const uint8_t *nonce) noexcept
 {
     std::vector<uint8_t> vector;
     for (size_t i = 0; i < msgSize; ++i)
