@@ -90,7 +90,7 @@ const std::array<uint8_t, 32> X25519Keys::agree (const std::string &pub) const n
 {
     std::vector<uint8_t> bytes;
     try {
-        bytes = cppcodec::base64_rfc4648::decode(pub);
+        bytes = cppcodec::base64_rfc4648::decode (pub);
     } catch (...) {
         return  std::array<uint8_t, 32>();
     }

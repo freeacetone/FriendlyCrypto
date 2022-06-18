@@ -42,7 +42,7 @@ std::vector<uint8_t> chaCha20 (const uint8_t *msg, size_t msgSize, const std::ar
     {
         vector.push_back(msg[i]);
     }
-    return chaCha20(vector, key, nonce);
+    return chaCha20 (vector, key, nonce);
 }
 
 } // namespace

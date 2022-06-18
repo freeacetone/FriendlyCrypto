@@ -31,8 +31,8 @@ void KeyPair::generateKeys() noexcept
     EVP_PKEY_get_raw_public_key (Pkey, m_public.data(), &len);
     EVP_PKEY_get_raw_private_key (Pkey, m_secret.data(), &len);
 
-    EVP_PKEY_CTX_free(Ctx);
-    EVP_PKEY_free(Pkey);
+    EVP_PKEY_CTX_free (Ctx);
+    EVP_PKEY_free (Pkey);
 }
 
 void KeyPair::setSecretKey (const std::array<uint8_t, 32> &secret) noexcept
@@ -43,7 +43,7 @@ void KeyPair::setSecretKey (const std::array<uint8_t, 32> &secret) noexcept
     size_t len = 32;
     EVP_PKEY_get_raw_public_key (Pkey, m_public.data(), &len);
 
-    EVP_PKEY_free(Pkey);
+    EVP_PKEY_free (Pkey);
 }
 
 const std::array<uint8_t, 32> KeyPair::getSecretKey() const noexcept
@@ -75,7 +75,7 @@ const std::shared_ptr<std::array<uint8_t, 64>> Signature::data() const noexcept
 
 const std::string Signature::base64String() const noexcept
 {
-    return cppcodec::base64_rfc4648::encode(m_data->data(), 64);
+    return cppcodec::base64_rfc4648::encode (m_data->data(), 64);
 }
 
 bool Signature::operator==(const Signature &another) const noexcept
