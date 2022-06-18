@@ -135,7 +135,7 @@ void X25519Keys::setSecretKey (const std::vector<uint8_t>& priv, bool calculateP
 {
     if (priv.size() != 32)
     {
-        throw std::runtime_error ("X25519Keys::setPrivateKey priv array size != 32");
+        throw std::runtime_error ("X25519Keys::setSecretKey priv array size != 32");
     }
     setSecretKey (priv.data(), calculatePublic);
 }
