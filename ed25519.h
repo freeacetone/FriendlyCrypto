@@ -52,7 +52,7 @@ private:
     std::shared_ptr<std::array<uint8_t, 64>> m_data;
 };
 
-//// FUNTIONS
+//// FUNCTIONS
 
 Ed25519::Signature sign (const std::vector<uint8_t>& message, const std::array<uint8_t, 32>& secretKey) noexcept;
 bool verify (const std::vector<uint8_t>& message, const Ed25519::Signature& signature, const std::array<uint8_t, 32>& publicKey) noexcept;
