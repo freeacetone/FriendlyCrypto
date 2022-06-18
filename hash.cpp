@@ -49,21 +49,21 @@ bool Sum::operator==(const std::string &base64String) const noexcept
     return operator==(rawAnother);
 }
 
-Hash::Sum sha256(const std::vector<uint8_t> &data) noexcept
+Hash::Sum sha256 (const std::vector<uint8_t> &data) noexcept
 {
     std::vector<uint8_t> result (SHA256_DIGEST_LENGTH);
     SHA256(data.data(), data.size(), result.data());
     return result;
 }
 
-Sum sha512(const std::vector<uint8_t> &data) noexcept
+Sum sha512 (const std::vector<uint8_t> &data) noexcept
 {
     std::vector<uint8_t> result (SHA512_DIGEST_LENGTH);
     SHA512(data.data(), data.size(), result.data());
     return result;
 }
 
-Sum md5(const std::vector<uint8_t> &data) noexcept
+Sum md5 (const std::vector<uint8_t> &data) noexcept
 {
     std::vector<uint8_t> result (MD5_DIGEST_LENGTH);
     MD5(data.data(), data.size(), result.data());

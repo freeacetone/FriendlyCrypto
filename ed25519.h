@@ -25,7 +25,7 @@ class KeyPair {
 public:
     KeyPair() {}
     void generateKeys()                                            noexcept;
-    void setSecretKey(const std::array<uint8_t, 32>& secret)       noexcept;
+    void setSecretKey (const std::array<uint8_t, 32>& secret)      noexcept;
     const std::array<uint8_t, 32> getSecretKey()             const noexcept;
     const std::array<uint8_t, 32> getPublicKey()             const noexcept;
 
