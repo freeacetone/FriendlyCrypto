@@ -9,7 +9,7 @@
  */
 
 #include "x25519.h"
-#include "cppcodec/base64_default_rfc4648.hpp"
+#include "cppcodec/cppcodec/base64_default_rfc4648.hpp"
 
 #include <iostream>
 #include <memory>
