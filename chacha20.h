@@ -31,8 +31,8 @@ namespace FriendlyCrypto {
 #define htole32
 #endif
 
-std::vector<uint8_t> chaCha20(const std::vector<uint8_t>& msg, const std::array<uint8_t, 32>& key, const uint8_t * nonce = nullptr);
-std::vector<uint8_t> chaCha20(const uint8_t* msg, size_t msgSize, const std::array<uint8_t, 32>& key, const uint8_t * nonce = nullptr);
+std::vector<uint8_t> chaCha20 (const std::vector<uint8_t>& msg, const std::array<uint8_t, 32>& key, const uint8_t * nonce = nullptr);
+std::vector<uint8_t> chaCha20 (const uint8_t* msg, size_t msgSize, const std::array<uint8_t, 32>& key, const uint8_t * nonce = nullptr);
 }
 
 #endif // CHACHA20_H
