@@ -40,7 +40,7 @@ public:
     std::string getSecretKeyBase64String()                                                const noexcept;
 
 private:
-    std::array<uint8_t, 32> m_publicKey;
+    std::array<uint8_t, 32> m_publicKey {0};
     EVP_PKEY_CTX * m_Ctx;
     EVP_PKEY * m_Pkey;
 };
