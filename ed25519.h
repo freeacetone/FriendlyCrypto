@@ -49,7 +49,7 @@ public:
     bool operator==(const std::string& base64String)           const noexcept;
 
 private:
-    std::shared_ptr<std::array<uint8_t, 64>> m_data {0};
+    std::shared_ptr<std::array<uint8_t, 64>> m_data;
 };
 
 //// FUNCTIONS

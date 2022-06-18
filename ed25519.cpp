@@ -124,7 +124,7 @@ Ed25519::Signature sign (const std::vector<uint8_t> &message, const std::array<u
 
     EVP_DigestSign (MDCtx, signature.data(), &length, message.data(), message.size());
 
-    EVP_PKEY_free(PKey);
+    EVP_PKEY_free (PKey);
     EVP_MD_CTX_destroy (MDCtx);
 
     return signature;
@@ -138,7 +138,7 @@ bool verify (const std::vector<uint8_t> &message, const Ed25519::Signature &sign
 
     bool res = EVP_DigestVerify (MDCtx, signature.data()->data(), 64, message.data(), message.size());
 
-    EVP_PKEY_free(PKey);
+    EVP_PKEY_free (PKey);
     EVP_MD_CTX_destroy (MDCtx);
 
     return res;
