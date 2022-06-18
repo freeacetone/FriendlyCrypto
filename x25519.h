@@ -16,7 +16,7 @@
 #include <vector>
 #include <openssl/evp.h>
 
-namespace cppcrypto {
+namespace FriendlyCrypto {
 
 class X25519Keys
 {

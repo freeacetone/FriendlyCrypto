@@ -14,7 +14,7 @@
 #include <iostream>
 #include <memory>
 
-namespace cppcrypto {
+namespace FriendlyCrypto {
 
 X25519Keys::X25519Keys()
 {
