@@ -1,7 +1,3 @@
-#ifndef HASH_H
-#define HASH_H
-
-#include <vector>
 /*
  * Based on
  * 1. OpenSSL lib
@@ -12,6 +8,10 @@
  * acetone, 2022
  */
 
+#ifndef HASH_H
+#define HASH_H
+
+#include <vector>
 #include <string>
 
 using uint8_t = unsigned char;
