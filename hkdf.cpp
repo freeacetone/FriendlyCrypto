@@ -13,7 +13,7 @@
 #include <openssl/kdf.h>
 #include <openssl/hmac.h>
 
-namespace cppcrypto {
+namespace FriendlyCrypto {
 
 std::array<uint8_t, 32> hkdf (const std::array<uint8_t, 32> &key, const std::string &info, const uint8_t *salt)
 {
