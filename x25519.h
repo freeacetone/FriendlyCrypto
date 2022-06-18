@@ -27,8 +27,8 @@ public:
 
     void generateKeys()                                                                         noexcept;
     void setSecretKey (const uint8_t * priv,                bool calculatePublic = false)       noexcept;
+    void setSecretKey (const std::array<uint8_t, 32>& priv, bool calculatePublic = false)       noexcept;
     void setSecretKey (const std::vector<uint8_t>& priv,    bool calculatePublic = false)               ;
-    void setSecretKey (const std::array<uint8_t, 32>& priv, bool calculatePublic = false)               ;
     void setSecretKey (const std::string& priv,             bool calculatePublic = false)               ;
     const std::array<uint8_t, 32> getPublicKey()                                          const noexcept;
     const std::array<uint8_t, 32> getSecretKey()                                          const noexcept;

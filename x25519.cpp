@@ -140,7 +140,7 @@ void X25519Keys::setSecretKey (const std::vector<uint8_t>& priv, bool calculateP
     setSecretKey (priv.data(), calculatePublic);
 }
 
-void X25519Keys::setSecretKey (const std::array<uint8_t, 32> &priv, bool calculatePublic)
+void X25519Keys::setSecretKey (const std::array<uint8_t, 32> &priv, bool calculatePublic) noexcept
 {
     setSecretKey (priv.data(), calculatePublic);
 }
