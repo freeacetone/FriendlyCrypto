@@ -21,7 +21,6 @@ namespace FriendlyCrypto {
 class X25519Keys
 {
 public:
-    X25519Keys (const std::array<uint8_t, 32>& priv, const std::array<uint8_t, 32>& pub);
     X25519Keys();
     ~X25519Keys();
 

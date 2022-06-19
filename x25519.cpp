@@ -22,21 +22,6 @@ X25519Keys::X25519Keys()
     m_Pkey = nullptr;
 }
 
-X25519Keys::X25519Keys (const std::array<uint8_t, 32> &priv, const std::array<uint8_t, 32> &pub)
-{
-    m_Pkey = EVP_PKEY_new_raw_private_key (EVP_PKEY_X25519, NULL, priv.data(), 32);
-    m_Ctx = EVP_PKEY_CTX_new (m_Pkey, NULL);
-    if (not pub.empty())
-    {
-        memcpy (m_publicKey.data(), pub.data(), 32);
-    }
-    else
-    {
-        size_t len = 32;
-        EVP_PKEY_get_raw_public_key (m_Pkey, m_publicKey.data(), &len);
-    }
-}
-
 X25519Keys::~X25519Keys()
 {
     EVP_PKEY_CTX_free (m_Ctx);
